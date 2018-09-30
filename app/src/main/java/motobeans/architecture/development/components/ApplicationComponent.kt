@@ -2,11 +2,12 @@ package motobeans.architecture.development.components
 
 import android.app.Application
 import com.optcrm.optreporting.AppModule
-import com.optcrm.optreporting.app.presenter.presenter.TestPresenter
+import com.optcrm.optreporting.app.presenter.presenter.MainPresenter
 import com.optcrm.optreporting.app.view.activity.MainActivity
 import com.optcrm.optreporting.app.view.adapters.Recycler.Adapter.ItemRecyclerAdapter
 import com.optcrm.optreporting.app.view.adapters.Recycler.Holder.ItemHolder
-import com.optcrm.optreporting.app.viewModel.TempViewModel
+
+import com.optcrm.optreporting.app.viewModel.MainViewModel
 import dagger.Component
 import motobeans.architecture.customAppComponents.activity.BaseAppCompatActivity
 import motobeans.architecture.development.modules.NetworkModule
@@ -35,13 +36,13 @@ interface ApplicationComponent {
     /**
      * Presenters
      */
-    fun inject(presenter: TestPresenter)
+    fun inject(presenter: MainPresenter)
 
 
     /**
      * View Model
      */
-    fun inject(viewModel: TempViewModel)
+    fun inject(viewModel: MainViewModel)
 
     /**
      * Adapters
