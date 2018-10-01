@@ -1,8 +1,8 @@
-package com.optcrm.optreporting.app.view.adapters.Recycler.Holder
+package com.lazyloading.app.view.adapters.Recycler.Holder
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
-import com.optcrm.optreporting.databinding.EmptyCommonListBinding
+import com.lazyloading.databinding.EmptyCommonListBinding
 
 /**
  * Created by swati on 24/9/2018.

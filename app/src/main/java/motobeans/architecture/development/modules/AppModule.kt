@@ -1,4 +1,4 @@
-package com.optcrm.optreporting
+package motobeans.architecture.development.modules
 
 import android.app.Application
 import dagger.Module

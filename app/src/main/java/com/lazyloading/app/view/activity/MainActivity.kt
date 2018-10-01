@@ -7,12 +7,12 @@ import android.os.Handler
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import com.lazyloading.R
+import com.lazyloading.app.presenter.connector.MainConnector
+import com.lazyloading.app.presenter.presenter.MainPresenter
 import com.lazyloading.app.view.adapters.Recycler.Adapter.EndlessRecyclerViewScrollListener
-import com.optcrm.optreporting.app.presenter.connector.MainConnector
-import com.optcrm.optreporting.app.presenter.presenter.MainPresenter
-import com.optcrm.optreporting.app.view.adapters.Recycler.Adapter.ItemRecyclerAdapter
-import com.optcrm.optreporting.app.viewModel.MainViewModel
-import com.optcrm.optreporting.databinding.ActivityMainBinding
+import com.lazyloading.app.view.adapters.Recycler.Adapter.ItemRecyclerAdapter
+import com.lazyloading.app.viewModel.MainViewModel
+import com.lazyloading.databinding.ActivityMainBinding
 import motobeans.architecture.appDelegates.ViewModelType.WITH_DAO
 import motobeans.architecture.appDelegates.viewModelProvider
 import motobeans.architecture.application.ArchitectureApp

@@ -5,7 +5,7 @@ import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.annotation.LayoutRes
 import android.view.LayoutInflater
-import com.optcrm.optreporting.databinding.CustomActionbaractivityWithBackBinding
+import com.lazyloading.databinding.CustomActionbaractivityWithBackBinding
 import motobeans.architecture.customAppComponents.activity.BaseAppCompatActivity
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty

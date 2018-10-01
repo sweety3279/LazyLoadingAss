@@ -1,4 +1,4 @@
-package com.optcrm.optreporting.app.view.adapters.Recycler.Adapter
+package com.lazyloading.app.view.adapters.Recycler.Adapter
 
 import android.content.Context
 import android.databinding.DataBindingUtil
@@ -7,11 +7,12 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.optcrm.optreporting.R
-import com.optcrm.optreporting.app.view.adapters.Recycler.Holder.EmptyCommonListHolder
-import com.optcrm.optreporting.app.view.adapters.Recycler.Holder.ItemHolder
-import com.optcrm.optreporting.databinding.EmptyCommonListBinding
-import com.optcrm.optreporting.databinding.ItemRowBinding
+import com.lazyloading.R
+import com.lazyloading.app.view.adapters.Recycler.Holder.EmptyCommonListHolder
+import com.lazyloading.app.view.adapters.Recycler.Holder.ItemHolder
+import com.lazyloading.databinding.EmptyCommonListBinding
+import com.lazyloading.databinding.ItemRowBinding
+
 import motobeans.architecture.application.ArchitectureApp
 import motobeans.architecture.retrofit.response.Response
 

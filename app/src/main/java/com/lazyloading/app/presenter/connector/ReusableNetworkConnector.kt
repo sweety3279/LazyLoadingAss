@@ -1,4 +1,4 @@
-package com.optcrm.optreporting.app.presenter.connector
+package com.lazyloading.app.presenter.connector
 
 import motobeans.architecture.constants.ConstantsApi
 

@@ -1,9 +1,9 @@
-package com.optcrm.optreporting.app.view.adapters.Recycler.Holder
+package com.lazyloading.app.view.adapters.Recycler.Holder
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.optcrm.optreporting.databinding.ItemRowBinding
+import com.lazyloading.databinding.ItemRowBinding
 import motobeans.architecture.application.ArchitectureApp
 import motobeans.architecture.retrofit.response.Response
 

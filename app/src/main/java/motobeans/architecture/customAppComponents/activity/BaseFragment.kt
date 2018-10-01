@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.afollestad.assent.Assent
-import com.optcrm.optreporting.app.presenter.connector.ReusableView
+import com.lazyloading.app.presenter.connector.ReusableView
 import motobeans.architecture.util.DialogFactory
 import motobeans.architecture.util.exShowToast
 
@@ -25,7 +25,7 @@ abstract class BaseFragment : Fragment(), ReusableView {
 
   @CallSuper
   fun <T : ViewDataBinding> initBinding(inflater: LayoutInflater, container: ViewGroup?,
-      layoutId: Int): T {
+                                        layoutId: Int): T {
     val binding = DataBindingUtil.inflate<T>(inflater, layoutId, container, false)
     rootView = binding.root
 

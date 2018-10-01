@@ -1,5 +1,5 @@
 
-package com.optcrm.optreporting.app.viewModel
+package com.lazyloading.app.viewModel
 
 import android.arch.lifecycle.MutableLiveData
 import android.support.v4.app.FragmentActivity

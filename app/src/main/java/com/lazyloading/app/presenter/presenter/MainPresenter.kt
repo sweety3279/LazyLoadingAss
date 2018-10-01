@@ -1,7 +1,7 @@
-package com.optcrm.optreporting.app.presenter.presenter
+package com.lazyloading.app.presenter.presenter
 
-import com.optcrm.optreporting.app.presenter.connector.MainConnector.PresenterOpt
-import com.optcrm.optreporting.app.presenter.connector.MainConnector.ViewOpt
+import com.lazyloading.app.presenter.connector.MainConnector.PresenterOpt
+import com.lazyloading.app.presenter.connector.MainConnector.ViewOpt
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import motobeans.architecture.application.ArchitectureApp

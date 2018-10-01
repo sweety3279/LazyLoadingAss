@@ -1,10 +1,10 @@
 
-package com.optcrm.optreporting.app.viewModel
+package com.lazyloading.app.viewModel
 
 import android.app.Activity
 import android.app.ProgressDialog
 import android.arch.lifecycle.ViewModel
-import com.optcrm.optreporting.app.presenter.connector.ReusableView
+import com.lazyloading.app.presenter.connector.ReusableView
 import motobeans.architecture.util.DialogFactory
 import motobeans.architecture.util.exShowToast
 

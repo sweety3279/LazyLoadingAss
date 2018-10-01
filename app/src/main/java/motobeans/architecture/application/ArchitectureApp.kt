@@ -2,7 +2,7 @@ package motobeans.architecture.application
 
 import android.app.Application
 import android.content.Context
-import com.optcrm.optreporting.AppModule
+import motobeans.architecture.development.modules.AppModule
 import motobeans.architecture.development.components.ApplicationComponent
 import motobeans.architecture.development.components.DaggerApplicationComponent
 import motobeans.architecture.development.modules.NetworkModule
