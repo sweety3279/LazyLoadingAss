@@ -1,12 +1,11 @@
 package motobeans.architecture.development.components
 
 import android.app.Application
+import com.lazyloading.app.view.activity.MainActivity
 import com.optcrm.optreporting.AppModule
 import com.optcrm.optreporting.app.presenter.presenter.MainPresenter
-import com.optcrm.optreporting.app.view.activity.MainActivity
 import com.optcrm.optreporting.app.view.adapters.Recycler.Adapter.ItemRecyclerAdapter
 import com.optcrm.optreporting.app.view.adapters.Recycler.Holder.ItemHolder
-
 import com.optcrm.optreporting.app.viewModel.MainViewModel
 import dagger.Component
 import motobeans.architecture.customAppComponents.activity.BaseAppCompatActivity

@@ -6,15 +6,14 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.view.MenuItem
 import android.view.View
-import com.optcrm.optreporting.R
+import com.lazyloading.R
 import com.optcrm.optreporting.app.presenter.connector.ReusableView
-import com.optcrm.optreporting.databinding.CustomActionbaractivityWithBackBinding
 import motobeans.architecture.application.ArchitectureApp
 import motobeans.architecture.util.DialogFactory
 import motobeans.architecture.util.exShowToast
 
 /**
- * Created by munishkumarthakur on 04/11/17.
+ * Created by swati on 04/11/17.
  */
 abstract class BaseAppCompatActivity : BaseAppActivityImpl(), ReusableView {
 
@@ -22,7 +21,7 @@ abstract class BaseAppCompatActivity : BaseAppActivityImpl(), ReusableView {
 
   private var isBackPressDialogToShow = false
   private var view: View? = null
-  private lateinit var bindingParent: CustomActionbaractivityWithBackBinding
+  private lateinit var bindingParent: com.lazyloading.databinding.CustomActionbaractivityWithBackBinding
 
   val fragmentActivity: FragmentActivity = this
   /**
@@ -60,7 +59,7 @@ abstract class BaseAppCompatActivity : BaseAppActivityImpl(), ReusableView {
     bindingParent.includeToolbar!!.llToolbarBack.setOnClickListener { _ -> onBackPressed() }
   }
 
-  fun getParentBinding(): CustomActionbaractivityWithBackBinding {
+  fun getParentBinding(): com.lazyloading.databinding.CustomActionbaractivityWithBackBinding {
     return bindingParent
   }
 

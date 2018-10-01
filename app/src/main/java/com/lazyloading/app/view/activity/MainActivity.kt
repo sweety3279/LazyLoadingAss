@@ -1,4 +1,4 @@
-package com.optcrm.optreporting.app.view.activity
+package com.lazyloading.app.view.activity
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.graphics.drawable.ClipDrawable
 import android.os.Handler
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
+import com.lazyloading.R
 import com.lazyloading.app.view.adapters.Recycler.Adapter.EndlessRecyclerViewScrollListener
-import com.optcrm.optreporting.R
 import com.optcrm.optreporting.app.presenter.connector.MainConnector
 import com.optcrm.optreporting.app.presenter.presenter.MainPresenter
 import com.optcrm.optreporting.app.view.adapters.Recycler.Adapter.ItemRecyclerAdapter
