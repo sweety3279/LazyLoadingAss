@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content" />
 
             <ImageView
-                android:scaleType="fitXY"
+                android:padding="@dimen/_5sdp"
                 android:layout_weight=".40"
                 android:id="@+id/ivItem"
                 android:layout_width="0dp"

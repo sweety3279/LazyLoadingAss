@@ -17,6 +17,7 @@ import motobeans.architecture.development.implementation.ApiEndPointImpl
 import motobeans.architecture.development.implementation.ApiProjectImpl
 import motobeans.architecture.development.interfaces.ApiProject
 import motobeans.architecture.development.interfaces.EndPoint
+import motobeans.architecture.util.hasNetwork
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -78,15 +79,15 @@ class NetworkModule {
   @Named(INTERCEPTOR_HEADER_V1)
   internal fun provideRetrofitHeaderV1(application: Application): Interceptor {
     return Interceptor { chain ->
-
       val original = chain.request()
-
       val builder = original.newBuilder()
-      builder.header("Content-Type", "application/json").method(original.method(), original.body())
-      builder.header("platform", "Android")
-
+      if (hasNetwork(application)!!){
+        builder.header("Content-Type", "application/json").method(original.method(), original.body())
+        builder.header("platform", "Android")
+      }else{
+      builder.header("Content-Type", "application/json=" + 3600 * 3600 * 24 * 7).build();
+      }
       val request = builder.build()
-
       chain.proceed(request)
     }
   }

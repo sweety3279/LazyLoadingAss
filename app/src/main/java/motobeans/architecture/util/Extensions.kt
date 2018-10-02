@@ -1,6 +1,8 @@
 package motobeans.architecture.util
 
 import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.view.View
 import android.widget.Toast
 import java.math.BigDecimal
@@ -127,4 +129,13 @@ fun <T : View> Array<T>.exInvisible() {
   for (view in this) {
     view.visibility = View.INVISIBLE
   }
+}
+
+fun hasNetwork(context: Context): Boolean? {
+  var isConnected: Boolean? = false // Initial Value
+  val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+  val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+  if (activeNetwork != null && activeNetwork.isConnected)
+    isConnected = true
+  return isConnected
 }

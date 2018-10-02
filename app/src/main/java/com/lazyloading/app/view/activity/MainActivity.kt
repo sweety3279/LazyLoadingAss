@@ -21,6 +21,7 @@ import motobeans.architecture.retrofit.response.Response
 import motobeans.architecture.retrofit.response.Response.ResponseData
 import motobeans.architecture.util.delegates.ActivityBindingProviderDelegate
 import motobeans.architecture.util.exGone
+import motobeans.architecture.util.exShowToast
 import motobeans.architecture.util.exVisible
 
 
@@ -38,6 +39,8 @@ class MainActivity : BaseAppCompatActivity(), MainConnector.ViewOpt {
   }
 
   var alItem = ArrayList<Response.RowData>()
+
+  var counter=0
 
 
   lateinit var presenter: MainConnector.PresenterOpt
@@ -79,20 +82,21 @@ class MainActivity : BaseAppCompatActivity(), MainConnector.ViewOpt {
       override fun onLoadMore(page: Int, totalItemsCount: Int) {
         hitApiForData()
       }
-
     })
   }
-
   private fun hitApiForData() {
-    showMoreDataLoading()
+      Handler().postDelayed(object : Runnable {
+        override fun run() {
+          if (counter==2){
+            hideMoreDataLoading()
+            "No more data is available".exShowToast(this@MainActivity)
+          }else{
+            showMoreDataLoading()
+            presenter.callApiForData(isLoadMore = true)
 
-    Handler().postDelayed(object : Runnable {
-      override fun run() {
-        presenter.callApiForData(isLoadMore = true)
-      }
-    }, 1500)
-
-
+          }
+        }
+      }, 1500)
   }
 
   private fun showMoreDataLoading() {
@@ -105,14 +109,17 @@ class MainActivity : BaseAppCompatActivity(), MainConnector.ViewOpt {
 
   override fun getApiDataSuccess(isLoadMore: Boolean, value: ResponseData) {
     hideMoreDataLoading()
-
     setTitleCustom(value.title)
-
     when(isLoadMore){
       false -> alItem.clear()
     }
+    if (value.rows.isEmpty()){
+      "Not connected to internet".exShowToast(this)
+    }else{
+      counter=counter+1
+      alItem.addAll(value.rows)
+    }
 
-    alItem.addAll(value.rows)
   }
 
   override fun getApiDataFailure(msg: String) {
